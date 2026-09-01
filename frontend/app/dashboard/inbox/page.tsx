@@ -12,7 +12,7 @@ export default function InboxPage() {
   const generateReply = async () => {
     setLoading(true);
     // Call backend API
-    const response = await fetch(`/api/conversations/1/generate-reply`, {
+    const response = await fetch(`/api/backend/conversations/1/generate-reply`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ message: messages[0].content, personality: "Professional" }),
